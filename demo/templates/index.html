@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether PoC Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aether</h1>
+            <p class="subtitle">Proof-of-Concept UI</p>
+        </header>
+
+        <section class="target-info card">
+            <h2>Target Profile (Simulated)</h2>
+            <p><strong>Name:</strong> {{ target_info.name }}</p>
+            <p><strong>Domain:</strong> {{ target_info.domain }}</p>
+            <p><strong>Industry:</strong> {{ target_info.industry }}</p>
+            <p><strong>Wi-Fi SSID:</strong> {{ target_info.wifi_ssid }}</p>
+            <p><strong>OSINT Snippets:</strong></p>
+            <ul>
+                {% for leak in target_info.osint_leaks %}
+                <li>{{ leak }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="controls card">
+            <h2>Actions</h2>
+            <button id="analyzeButton">Analyze Target & Simulate Attack</button>
+            <div id="loadingIndicator" class="loading" style="display: none;">
+                <div class="spinner"></div> Analyzing...
+            </div>
+        </section>
+
+        <section class="output">
+            <div class="log-output card">
+                <h2>Operation Log</h2>
+                <pre id="logOutput"><code class="log-code">[Idle] Ready for analysis.</code></pre>
+            </div>
+
+            <div class="results-output card">
+                <h2>AI Analysis & Results</h2>
+                <div id="aiResults">
+                    <p>Analysis results will appear here.</p>
+                </div>
+                 <div id="attackResult" style="margin-top: 15px;">
+                     <!-- Attack success/failure shown here -->
+                 </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
