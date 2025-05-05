@@ -1,5 +1,5 @@
 # AETHER
-[AetherLogoPNG](aether-logo-stylized-png.png)
+![AetherLogoPNG](aether-logo-stylized-png.png)
 
 A simple proof-of-concept application that demonstrates core-features by means of a simulated real-world use-case scenario.
 
