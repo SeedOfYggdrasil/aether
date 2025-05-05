@@ -1,5 +1,5 @@
 # AETHER
-## Demo Application
+[AetherLogoPNG](https://github.com/seedofyggdrasil/aether/python/static/aether-logo-full.png)
 
 A simple proof-of-concept application that demonstrates core-features by means of a simulated real-world use-case scenario.
 
