@@ -1,6 +1,7 @@
 ![AetherLogoPNG](aether-logo-stylized-png.png)
 
 ### ARCHITECTURE
+```
 /demo/
 ├── app.py/
 ├── static/
@@ -8,4 +9,4 @@
 │   └── script.js
 └── templates/
     └── index.html
-
+```
