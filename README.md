@@ -1,4 +1,4 @@
-![AetherLogoPNG](aether-logo-full-png.png)
+![AetherLogoPNG](assets/aether-logo-full-png.png)
 
 ### ARCHITECTURE
 ```
